@@ -1,0 +1,61 @@
+.article {
+  grid-column: span 3 / span 3;
+}
+
+.articleContent {
+  border: 2px solid;
+  padding: 2rem;
+  border-color: var(--border-primary);
+  background-color: var(--content-background);
+}
+
+.prose {
+  max-width: none;
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  font-family: 'Geist Mono', monospace;
+}
+
+.prose h1:first-child {
+  margin-top: 0;
+}
+
+.prose h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.prose h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+  color: var(--text-prose);
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.625;
+  color: var(--text-prose);
+}
+.postTitle {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    font-family: 'Geist Mono', monospace;
+}

@@ -1,1 +1,17 @@
-@layer layouts {}
+@layer layouts {
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--foreground);
+    background-color: var(--background);
+
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
+
+  .main-content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}

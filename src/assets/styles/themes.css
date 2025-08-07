@@ -1,55 +1,162 @@
+/* AIDEV-NOTE: This file centralizes all theme-related CSS variables for the application.
+   It defines two themes, 'light' and 'dark', using a data-attribute selector on the root element.
+   The theme can be toggled by changing the value of `data-theme` on the `<html>` tag.
+   These variables are then consumed by component-specific stylesheets. */
+
 @import url('@Styles/mediaQueries.css');
 
-
-/* Dark theme as the default */
 :root {
-  color-scheme: dark;
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  /* AIDEV-NOTE: Default to light theme. The script in layout.tsx will set the correct initial theme. */
+  --accent: #fbbd23;
+  --status-ok: #10b981;
 
-  /* color primitives */
-  --gray-rgb: 255, 255, 255;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+  /* General */
+  --background: #f9fafb;
+  --foreground: #111827;
+  --text-muted: #4b5563;
+  --text-prose: #374151;
+  --border-primary: #d1d5db;
+  --border-secondary: #9ca3af;
+  --border-interactive: #000;
+  --border-accent: var(--accent);
+
+  /* Components */
+  --header-background: #fff;
+  --header-line-border: #e5e7eb;
+  --nav-background: #f3f4f6;
+  --widget-background: #1f2937;
+  --content-background: #fff;
+  --card-background: #fff;
+  --card-header-background: #f3f4f6;
+  --comment-background: #f9fafb;
+  --input-background: #fff;
+  --hero-background: #fff;
+
+  /* Buttons & Interactive Elements */
+  --button-text: #000;
+  --button-background-hover: #000;
+  --button-text-hover: #fff;
+
+  --category-background: #000;
+  --category-text: #fff;
+
+  --nav-text-active: #000;
+  --nav-text-inactive-hover: #000;
+
+  --read-more-text: #000;
+
+  --related-button-text: #374151;
+  --related-button-border: #9ca3af;
+  --related-button-text-hover: #000;
+  --related-button-border-hover: #000;
+
+  --hero-secondary-text: #4b5563;
+  --hero-button-secondary-text: #4b5563;
+  --hero-button-secondary-border: #9ca3af;
 }
 
-/* Light theme if the user prefers it */
-@media (prefers-color-scheme: light) {
-  :root {
-    color-scheme: light;
-    --background: #ffffff;
-    --foreground: #171717;
-
-    /* Component-specific variables */
-    --gray-rgb: 0, 0, 0;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-  }
-}
-
-/* Manual override with a data-theme attribute: toggle theme */
-/* These rules have higher specificity than :root so they will always override the system preference. */
-[data-theme="light"] {
+[data-theme='light'] {
   color-scheme: light;
-  --background: #ffffff;
-  --foreground: #171717;
+  --accent: #fbbd23;
+  --status-ok: #10b981;
 
-  /* color primitives */
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+  /* General */
+  --background: #f9fafb;
+  --foreground: #111827;
+  --text-muted: #4b5563;
+  --text-prose: #374151;
+  --border-primary: #d1d5db;
+  --border-secondary: #9ca3af;
+  --border-interactive: #000;
+  --border-accent: var(--accent);
+
+  /* Components */
+  --header-background: #fff;
+  --header-line-border: #e5e7eb;
+  --nav-background: #f3f4f6;
+  --widget-background: #f9fafb;
+  --content-background: #fff;
+  --card-background: #fff;
+  --card-header-background: #f3f4f6;
+  --comment-background: #f9fafb;
+  --input-background: #fff;
+  --hero-background: #fff;
+  --blog-background: #f9fafb;
+
+  /* Buttons & Interactive Elements */
+  --button-text: #000;
+  --button-background-hover: #000;
+  --button-text-hover: #fff;
+
+  --category-background: #000;
+  --category-text: #fff;
+
+  --nav-text-active: #000;
+  --nav-text-inactive-hover: #000;
+
+  --read-more-text: #000;
+
+  --related-button-text: #374151;
+  --related-button-border: #9ca3af;
+  --related-button-text-hover: #000;
+  --related-button-border-hover: #000;
+
+  --hero-secondary-text: #4b5563;
+  --hero-button-secondary-text: #4b5563;
+  --hero-button-secondary-border: #9ca3af;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   color-scheme: dark;
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --accent: #fbbd23;
+  --status-ok: #34d399;
 
-  /* color primitives */
-  --gray-rgb: 255, 255, 255;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+  /* General */
+  --background: #111827;
+  --foreground: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-prose: #d1d5db;
+  --border-primary: #374151;
+  --border-secondary: #4b5563;
+  --border-interactive: var(--accent);
+  --border-accent: var(--accent);
+
+  /* Components */
+  --header-background: #000;
+  --header-line-border: #1f2937;
+  --nav-background: #1f2937;
+  --widget-background: #1f2937;
+  --content-background: #000;
+  --card-background: #000;
+  --card-header-background: #1f2937;
+  --comment-background: #1f2937;
+  --input-background: #1f2937;
+  --hero-background: #000;
+  --blog-background: #111827;
+
+  /* Buttons & Interactive Elements */
+  --button-text: var(--accent);
+  --button-background-hover: var(--accent);
+  --button-text-hover: #000;
+
+  --category-background: var(--accent);
+  --category-text: #000;
+
+  --nav-text-active: var(--accent);
+  --nav-text-inactive-hover: var(--accent);
+
+  --read-more-text: var(--accent);
+
+  --related-button-text: #d1d5db;
+  --related-button-border: #4b5563;
+  --related-button-text-hover: var(--accent);
+  --related-button-border-hover: var(--accent);
+
+  --hero-secondary-text: #6b7280;
+  --hero-button-secondary-text: #9ca3af;
+  --hero-button-secondary-border: #4b5563;
 }
+
 
 @layer themes {
   body {

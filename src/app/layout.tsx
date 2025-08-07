@@ -1,5 +1,4 @@
-import type { Metadata } from 'next';
-import { interVariable, interDisplay } from '@Lib/fonts';
+import type { Metadata }      from 'next';
 
 import '@Styles/scale.css';
 import '@Styles/normalize.css';
@@ -10,15 +9,31 @@ import '@Styles/layouts.css';
 import '@Styles/themes.css';
 import '@Styles/utilities.css';
 
+import { Geist, Geist_Mono }  from 'next/font/google';
+import Header                 from '@Components/Header';
+import Footer                 from '@Components/Footer';
+import Navigation             from '@Components/Navigation';
 
-export const metadata: Metadata = {
-  title: 'MyWebSite',
-  description: 'MyWebSite'
+
+const geistSans = Geist({
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
+});
+
+
+const metadata: Metadata = {
+  title: 'dahbrutalist',
+  description: 'about me'
 };
 
 async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${interVariable.variable} ${interDisplay.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <head>
         <meta name="apple-mobile-web-app-title" content="MyWebSite" />
 
@@ -36,7 +51,7 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
                 const isLight = window.matchMedia('(prefers-color-scheme: light)').matches;
                 document.documentElement.setAttribute('data-theme', isLight ? 'light' : 'dark');
               })();
-            `,
+            `
           }}
         />
 
@@ -44,7 +59,17 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
       </head>
 
       <body>
-        {children}
+        <div className="container">
+          <Header/>
+
+          <Navigation />
+
+          <main className="main-content">
+            {children}
+          </main>
+
+          <Footer />
+        </div>
       </body>
 
     </html>
@@ -52,4 +77,5 @@ async function RootLayout({ children }: { children: React.ReactNode }) {
 }
 
 
+export { metadata };
 export default RootLayout;

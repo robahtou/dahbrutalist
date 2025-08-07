@@ -1,0 +1,92 @@
+.postCard {
+  border: 2px solid;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-color: var(--border-primary);
+  background-color: var(--card-background);
+}
+
+.postCard:hover {
+  border-color: var(--border-accent);
+}
+
+.postCardHeader {
+  padding: 0.5rem;
+  border-bottom: 2px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-color: var(--border-primary);
+  background-color: var(--card-header-background);
+}
+
+.postCardMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.postCardCategory {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  background-color: var(--category-background);
+  color: var(--category-text);
+}
+
+.postCardDate {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+.postCardStatusIndicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: var(--status-ok);
+}
+
+.postCardContent {
+  padding: 1.5rem;
+}
+
+.postCardTitle {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.postCardExcerpt {
+  margin-bottom: 1.5rem;
+  line-height: 1.625;
+  color: var(--text-prose);
+}
+
+.postCardReadMore {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  color: var(--read-more-text);
+}
+
+.tag {
+  margin-block-end: 1rem;
+  padding: 0.25rem 0.5rem;
+
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+
+  border: 1px solid;
+  border-color: var(--border-secondary);
+  color: var(--text-muted);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}

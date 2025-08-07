@@ -1,0 +1,54 @@
+@import url('@Styles/mediaQueries.css');
+
+
+.nav {
+  border-block: 2px solid;
+  border-color: var(--border-accent);
+  background-color: var(--nav-background);
+}
+
+.navContent {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 1.5rem;
+}
+
+.navList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.backToIndex {
+  color: var(--nav-text-active);
+}
+
+@media (--from-laptop) {
+  .navList {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+}
+
+.navItem {
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: var(--leading-snug);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.navItem.active {
+  color: var(--nav-text-active);
+}
+
+.navItem.inactive {
+  color: var(--text-muted);
+}
+
+.navItem.inactive:hover {
+  color: var(--nav-text-inactive-hover);
+}

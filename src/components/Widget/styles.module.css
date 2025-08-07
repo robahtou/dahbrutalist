@@ -1,0 +1,24 @@
+.sidebarWidget {
+  padding: 1.5rem;
+  border: 2px solid;
+  border-color: var(--border-primary);
+  background-color: var(--widget-background);
+}
+
+.sidebarTitle {
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 900;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.sidebarContent {
+  font-family: monospace;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: var(--text-muted);
+}

@@ -1,0 +1,92 @@
+.headerContent {
+  position: relative;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1.5rem;
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.postGrid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .postGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.postMain {
+  grid-column: span 3 / span 3;
+}
+
+.postMeta {
+  margin-bottom: 1.5rem;
+}
+
+.postMetaInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.postCategory {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  background-color: var(--category-background);
+  color: var(--category-text);
+}
+
+.postDate {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--text-muted);
+}
+
+.statusIndicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--status-ok);
+}
+
+.statusText {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--text-muted);
+}
+
+.postTitle {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  font-family: 'Geist Mono', monospace;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  border: 1px solid;
+  border-color: var(--border-secondary);
+  color: var(--text-muted);
+}

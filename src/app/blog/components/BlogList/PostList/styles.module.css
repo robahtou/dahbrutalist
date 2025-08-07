@@ -1,0 +1,6 @@
+.postsList {
+  grid-column: span 3 / span 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
