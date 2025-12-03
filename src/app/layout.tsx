@@ -1,3 +1,4 @@
+import type { ReactNode }     from 'react';
 import type { Metadata }      from 'next';
 
 import '@Styles/scale.css';
@@ -25,17 +26,16 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
-
 const metadata: Metadata = {
   title: 'dahbrutalist',
   description: 'about me'
 };
 
-async function RootLayout({ children }: { children: React.ReactNode }) {
+async function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <head>
-        <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+        <meta name="apple-mobile-web-app-title" content="dahbrutalist" />
 
         <link rel="manifest"          href="favicon/manifest.json" />
         <link rel="icon"              href="favicon/favicon.ico"    type="image/x-icon"   sizes="48x48"   />
